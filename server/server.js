@@ -25,14 +25,14 @@ const sender = nodemailer.createTransport({
 //multer upload
 const storage = multer.diskStorage({
   //using this destination if you run the server with node
-  destination: function (req, file, cb) {
-    cb(null, "my-upload");
-  },
+  // destination: function (req, file, cb) {
+  //   cb(null, "my-upload");
+  // },
 
   //using this destination if you run the application with docker
-  // destination: function (req, file, cb) {
-  //   cb(null, "/app/server/my-upload");
-  // },
+  destination: function (req, file, cb) {
+    cb(null, "/app/server/my-upload");
+  },
 
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
@@ -51,16 +51,12 @@ if (!fs.existsSync(uploadDir)) {
 }
 console.log("upload directory: ", uploadDir);
 app.use("/my-upload", express.static(uploadDir));
-//app.use("/my-upload", express.static("my-upload"));
 
 app.use(express.json());
-//app.use(cors());
+
 app.use(
   cors({
-    origin: [
-      "http://localhost:5000",
-      "https://portfolio-frontend-yqyy.onrender.com",
-    ],
+    origin: [`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`],
   })
 );
 

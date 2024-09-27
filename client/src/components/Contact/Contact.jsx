@@ -8,6 +8,9 @@ import FilesList from "./FilesList.jsx";
 import { toast, ToastContainer } from "react-toastify";
 import "../../ReactToastify.css";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const defaultFormFields = {
   name: "",
@@ -47,13 +50,13 @@ const Contact = () => {
       formData.append("files", files[i]);
     }
     try {
-       const response = await axios.post(
-         "https://nodemailer-docker.onrender.com/send-email",
-         formData
-       );
+      const response = await axios.post(
+        `${process.env.NODE_SERVER_URL}/send-email`,
+        formData
+      );
       //const response = await axios.post(
-        //"http://localhost:8080/send-email",
-        //formData
+      //`${process.env.NODE_SERVER_LOCAL}/send-email`,
+      //formData
       //);
       const data = response.data;
       if (data.status === 200) {
