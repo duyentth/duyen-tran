@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    image: dntranstudy/portfolio
+    container_name: portfolio
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+    env_file:
+      - ./server/.env
