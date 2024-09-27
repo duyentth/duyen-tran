@@ -47,14 +47,14 @@ const Contact = () => {
       formData.append("files", files[i]);
     }
     try {
-      // const response = await axios.post(
-      //   "https://email-sender-server-xg63.onrender.com/send-email",
-      //   formData
-      // );
-      const response = await axios.post(
-        "http://localhost:8080/send-email",
-        formData
-      );
+       const response = await axios.post(
+         "https://nodemailer-docker.onrender.com/send-email",
+         formData
+       );
+      //const response = await axios.post(
+        //"http://localhost:8080/send-email",
+        //formData
+      //);
       const data = response.data;
       if (data.status === 200) {
         toast.success(data.message, { position: toast.POSITION.TOP_RIGHT });
