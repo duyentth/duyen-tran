@@ -14,7 +14,16 @@ After downloading code from this repo, open terminal window and navigate to each
 
 ### Run program
 
-With your terminal, move into 'server' folder and run `node server.js ` to start the server. Open another terminal window, move into 'client' folder and run `npm run serve` to run the program.
+1. Run the application with your cloned codes:
+   - With your terminal, move into 'server' folder and run `node server.js ` to start the server.
+   - Open another terminal window, move into 'client' folder and run `npm run serve` to run the program.
+2. Run the application without code downloading
+
+- You need Docker installed in your system.
+- Download the "docker-compose.yml" from this repo
+- Open the termial and move to the directory contains "docker-compose.yml"
+- Run `docker compose up`
+- Open http://localhost:5000 with your browser to see the result
 
 ## Technologies
 
