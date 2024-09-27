@@ -8,9 +8,9 @@ import FilesList from "./FilesList.jsx";
 import { toast, ToastContainer } from "react-toastify";
 import "../../ReactToastify.css";
 import axios from "axios";
-import dotenv from "dotenv";
 
-dotenv.config();
+
+
 
 const defaultFormFields = {
   name: "",
@@ -51,7 +51,7 @@ const Contact = () => {
     }
     try {
       const response = await axios.post(
-        `${process.env.NODE_SERVER_URL}/send-email`,
+        `https://nodemailer-docker.onrender.com/send-email`,
         formData
       );
       //const response = await axios.post(
