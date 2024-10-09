@@ -3,7 +3,7 @@ import TypeWriter from "typewriter-effect";
 
 const About = () => {
   const myself =
-    "I am a passionate Full Stack Software Developer with a Master's degree in Software Engineering and 3 years of dedicated experience in frontend development. I specialize in creating user-friendly, responsive interfaces for ERP systems using React and TypeScript. My journey has equipped me with a deep understanding of building dynamic forms with real-time validation and effectively connecting frontend applications to backend services through RESTful APIs and GraphQL." +
+    "I am a passionate Full Stack Software Developer with a Master's degree in Software Engineering and 3 years of dedicated experience in frontend development. I specialize in creating user-friendly, responsive interfaces using React, NextJS and TypeScript. My journey has equipped me with a deep understanding of building dynamic forms with real-time validation and effectively connecting frontend applications to backend services through RESTful APIs and GraphQL." +
     "<br/> <br/>" +
     "Beyond frontend technologies, I have expanded my expertise into backend development with Node.js, Express, and MongoDB. I thrive in designing scalable applications using microservices architecture and cloud solutions like AWS. Throughout my academic journey, I successfully completed several full-stack projects, including e-commerce platforms and real estate systems, showcasing my ability to deliver end-to-end solutions.<br/> <br/> " +
     "Key expertise includes: <br/><br/>" +
