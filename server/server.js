@@ -8,8 +8,10 @@ import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import job from "./cron";
 
 dotenv.config();
+job.start();
 //mail transporter
 const sender = nodemailer.createTransport({
   service: "Gmail",
