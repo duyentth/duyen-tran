@@ -34,6 +34,32 @@
     "codeLink": "https://github.com/duyentth/Property_Rental"
   },
   {
+    "id": 5,
+    "name": "Expense Tracker",
+    "technologies": [
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "React ChartJS",
+      "NodeJS",
+      "ExpressJS",
+      "PassportJS",
+      "MongoDB",
+      "GraphQL",
+      "Apollo GraphQL"      
+    ],
+    "features": [
+      "Global state management with Apollo Client",
+      "Authentication with Passport.js and MongoDB session store",
+      "Querying and mutating data in GraphQL",
+      "Handling error for both frontend and backend",
+      "Displaying data with React ChartJS"
+    ],
+    "image": "ExpenseTracker",
+    "liveDemoLink": "https://expense-tracker-fjcg.onrender.com",
+    "codeLink": "https://github.com/duyentth/expense-tracker"
+  },
+  {
     "id": 2,
     "name": "E-Commerce MicroServices",
     "technologies": [
