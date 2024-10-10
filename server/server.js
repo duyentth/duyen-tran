@@ -8,8 +8,10 @@ import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import job from "./cron.js";
 
 dotenv.config();
+job.start();
 //mail transporter
 const sender = nodemailer.createTransport({
   service: "Gmail",
@@ -61,7 +63,10 @@ app.use(
 );
 
 app.get("/", (req, res) => res.send({ status: "200", message: "OK" }));
-
+app.get("/test", (req, res) => {
+  console.log("test request");
+  res.send({ status: 200, message: "test request OK" });
+});
 app.post("/send-email", upload.array("files"), (req, res) => {
   const { name, email, subject, message } = req.body;
   console.log(name, email, subject, message);
