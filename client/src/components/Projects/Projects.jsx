@@ -4,6 +4,7 @@ import RefurbishedGoodImg from "../../assets/RefurbishedGood.png";
 import PropertyPulseImg from "../../assets/property-pulse.png";
 import ResponsiveWebsImg from "../../assets/web design.png";
 import MicroservicesImg from "../../assets/microservices.png";
+import ExpenseTrackerImg from "../../assets/ExpenseTracker.png";
 import projects from "../../../projects.json";
 
 const Projects = () => {
@@ -12,6 +13,7 @@ const Projects = () => {
     PropertyPulse: PropertyPulseImg,
     ResponsiveWebs: ResponsiveWebsImg,
     Microservices: MicroservicesImg,
+    ExpenseTracker: ExpenseTrackerImg
   };
   return (
     <section id="projects" className="mt-20 scroll-mt-20">
