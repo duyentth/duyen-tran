@@ -61,7 +61,7 @@ app.use(
     origin: [`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`],
   })
 );
-job.start();
+//job.start();
 app.get("/", (req, res) => res.send({ status: "200", message: "OK" }));
 
 app.post("/send-email", upload.array("files"), (req, res) => {
