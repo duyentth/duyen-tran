@@ -55,10 +55,11 @@ console.log("upload directory: ", uploadDir);
 app.use("/my-upload", express.static(uploadDir));
 
 app.use(express.json());
-
+console.log(`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`);
 app.use(
   cors({
-    origin: [`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`],
+    //origin: [`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`],
+    origin:"*"
   })
 );
 //job.start();
