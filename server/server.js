@@ -58,8 +58,10 @@ app.use(express.json());
 console.log(`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`);
 app.use(
   cors({
-    //origin: [`${process.env.REACT_APP_LOCAL}`, `${process.env.REACT_APP_URL}`],
-    origin:"*"
+    origin: "https://duyen-tran.onrender.com",  // Allow your frontend URL
+    methods: "GET,POST",  // Specify allowed methods
+    allowedHeaders: "Content-Type, Authorization",  // Specify allowed headers
+    credentials: true,  // If you need to allow credentials (cookies, etc.)
   })
 );
 //job.start();
