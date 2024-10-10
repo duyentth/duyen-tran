@@ -68,6 +68,11 @@ app.use(
 
 app.get("/", (req, res) => res.send({ status: "200", message: "OK" }));
 
+app.get("/test", (req, res) => {
+  console.log("Test GET request");
+  res.send({ status: 200, message: " test GET request OK" });
+});
+
 app.post("/send-email", upload.array("files"), (req, res) => {
   const { name, email, subject, message } = req.body;
   console.log(name, email, subject, message);
